@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Even / odd number</title>
   </head>
   <body>
     <input type="number" id="value" placeholder="Value" />
@@ -14,7 +14,6 @@
     let result = document.querySelector("#result");
     Value.addEventListener("input", function () {
       let number = Number(Value.value);
-
       if (Value.value % 2 === 0) {
         result.textContent = "Even Number";
       } else {
