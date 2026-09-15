@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="number" />
+    <div id="result"></div>
+  </body>
+  <script>
+    let number = document.querySelector("#number");
+    let result = document.querySelector("#result");
+    number.addEventListener("input", function () {
+      if (number.value === "") {
+        result.textContent = "Enter value";
+        return;
+      }
+      let value = Number(number.value);
+      if (value > 0) {
+        result.textContent = "Positive Number!";
+      } else {
+        result.textContent = "Negative Number!";
+      }
+    });
+  </script>
+</html>

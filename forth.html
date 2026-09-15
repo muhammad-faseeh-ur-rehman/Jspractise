@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+  </head>
+  <body>
+    <input type="number" id="number" placeholder="Enter number" />
+    <button id="generate">Generate</button>
+    <div id="result"></div>
+  </body>
+  <script>
+    let number = document.querySelector("#number");
+    let generate = document.querySelector("#generate");
+    let result = document.querySelector("#result");
+    generate.addEventListener("click", function () {
+      if (number.value == "") {
+        result.textContent = "Enter a number!";
+        return;
+      }
+      let value = Number(number.value);
+      for (let i = 1; i <= 10; i++) {
+        result.innerHTML += value + " * " + i + "="(value * i) + "<br>";
+      }
+    });
+  </script>
+</html>

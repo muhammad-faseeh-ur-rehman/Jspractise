@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <input type="number" name="" id="val1" placeholder="Value 1" />
+      <input type="number" name="" id="val2" placeholder="Value 2" />
+      <h1>Choose operation</h1>
+      <button id="add">+</button>
+      <button id="min">-</button>
+      <button id="div">/</button>
+      <button id="mul">*</button>
+      <button id="rem">%</button>
+    </div>
+    <div id="result"></div>
+  </body>
+  <script>
+    let value1 = document.getElementById("val1");
+    let value2 = document.getElementById("val2");
+    let Addvalue = document.getElementById("add");
+    let minvalue = document.getElementById("min");
+    let Divivalue = document.getElementById("div");
+    let Mulvalue = document.getElementById("mul");
+    let Remvalue = document.getElementById("rem");
+    let result = document.getElementById("result");
+    Addvalue.addEventListener("click", function () {
+      if (value1.value == "") {
+        alert("Enter value 1");
+        return;
+      }
+      if (value2.value == "") {
+        alert("Enter value 2");
+        return;
+      }
+      let input1 = Number(value1.value);
+      let input2 = Number(value2.value);
+      result.textContent = input1 + input2;
+    });
+    minvalue.addEventListener("click", function () {
+      if (value1.value == "") {
+        alert("Enter value 1");
+        return;
+      }
+      if (value2.value == "") {
+        alert("Enter value 2");
+        return;
+      }
+      let input1 = Number(value1.value);
+      let input2 = Number(value2.value);
+      result.textContent = input1 - input2;
+    });
+    Divivalue.addEventListener("click", function () {
+      if (value1.value == "") {
+        alert("Enter value 1");
+        return;
+      }
+      if (value2.value == "") {
+        alert("Enter value 2");
+        return;
+      }
+      let input1 = Number(value1.value);
+      let input2 = Number(value2.value);
+      result.textContent = input1 / input2;
+    });
+    Mulvalue.addEventListener("click", function () {
+      if (value1.value == "") {
+        alert("Enter value 1");
+        return;
+      }
+      if (value2.value == "") {
+        alert("Enter value 2");
+        return;
+      }
+      let input1 = Number(value1.value);
+      let input2 = Number(value2.value);
+      result.textContent = input1 * input2;
+    });
+    Remvalue.addEventListener("click", function () {
+      if (value1.value == "") {
+        alert("Enter value 1");
+        return;
+      }
+      if (value2.value == "") {
+        alert("Enter value 2");
+        return;
+      }
+      let input1 = Number(value1.value);
+      let input2 = Number(value2.value);
+      result.textContent = input1 % input2;
+    });
+  </script>
+</html>
