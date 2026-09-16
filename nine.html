@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Result</title>
+  </head>
+  <body>
+    <h1>Student Result</h1>
+    <input type="text" id="name" placeholder="Enter student name" />
+    <br /><br />
+    <input type="number" id="english" placeholder="English Marks" />
+    <br /><br />
+    <input type="number" id="math" placeholder="Math Marks" />
+    <br /><br />
+    <input type="number" id="computer" placeholder="Computer Marks" />
+    <br /><br />
+    <button onclick="calculateResult()">Show Result</button>
+    <hr />
+    <h2 id="studentName"></h2>
+    <h3 id="total"></h3>
+    <h3 id="percentage"></h3>
+    <h3 id="grade"></h3>
+  </body>
+  <script>
+    function calculateResult() {
+      let name = document.getElementById("name").value;
+      let english = Number(document.getElementById("english").value);
+      let math = Number(document.getElementById("math").value);
+      let computer = Number(document.getElementById("computer").value);
+      let total = english + math + computer;
+      let percentage = (total / 300) * 100;
+      let grade;
+      if (percentage >= 80) {
+        grade = "A";
+      } else if (percentage >= 70) {
+        grade = "B";
+      } else if (percentage >= 60) {
+        grade = "C";
+      } else if (percentage >= 50) {
+        grade = "D";
+      } else {
+        grade = "F";
+      }
+      document.getElementById("studentName").innerText =
+        "Student Name: " + name;
+      document.getElementById("total").innerText =
+        "Total Marks: " + total + " / 300";
+      document.getElementById("percentage").innerText =
+        "Percentage : " + percentage.toFixed(2) + " %";
+      document.getElementById("grade").innerText = "Grade: " + grade;
+    }
+  </script>
+</html>
